@@ -1,19 +1,146 @@
-//  display 4 buttons
+$(document).ready(function() {
 
-//  the player will be shown a random number at the start of the game. 19 - 120
+    // random variable array player has to reach
+    var rand = [];
 
-//  When the player clicks on a crystal, it will add a specific amount 
-//  of points to the player's total score. 1 - 12
+        for (var r = 19; r < 121; r++) {
 
-//  The player wins if their total score matches the random number 
-//  from the beginning of the game.
+            rand.push(r);
 
-//  The player loses if their score goes above the random number.
+        }
 
-//  The game restarts whenever the player wins or loses.
+    // army building array
+    var knights = [];
 
-//  When the game begins again, the player should see a new random number.
-//  Also, all the crystals will have four new hidden values. Of course, 
-//  the user's score (and score counter) will reset to zero.
+        for ( var k =1; k < 13; k++) {
+
+            knights.push(k);
+
+        }
+
+    console.log(knights);
+
+    //set variables
+    var randNumber;
+    var knightNumbers =[];
+    var k1;
+    var k2;
+    var k3;
+    var k4;
+    var totalScore = 0;
+    var wins = 0;
+    var losses = 0;
+
+    //picking random number
+    function pickRandomNumber(arr) {
+
+        var x = arr[Math.floor(Math.random() * arr.length)];
+        randNumber = x;
+        $("#randomNumber").html(randNumber);
+
+        console.log("random number: " + randNumber);
+    }
+
+    //picking values for the knights
+    function pickRandomKnights(arr) {
+
+        for (var y = 0; y < 4; y++){
+
+            var a = arr[Math.floor(Math.random() * arr.length)];
+
+            knightNumbers.push(a);
+        }
+
+        console.log("knight numbers: " + knightNumbers);
+
+    }
+
+    // for loop to change values of the knights
+    function knightValues(arr) {
+        
+        for (i = 0; i < arr.length; i++) {
+
+            $("#button-" + (i+1)).attr("value", arr[i]);
+            console.log(this);
+            }
+            k1 = arr[0];
+            k2 = arr[1];
+            k3 = arr[2];
+            k4 = arr[3];
+        }
+
+    //game reset function
+    function gameReset(x) {
+
+    knightNumbers = [];
+
+    pickRandomNumber(rand);
+
+    pickRandomKnights(knights);
+
+    knightValues(knightNumbers);
+
+    totalScore = 0;
+    $("#totalNumber").html(totalScore);
+
+    alert(x);
+}
+
+    pickRandomNumber(rand); // random number to match
+	pickRandomKnights(knights); // array of random knight values
+	knightValues(knightNumbers);
+
+		// knight button functions
+		$("#button-1").on("click", function() {
+
+			totalScore += k1;
+            $("#totalNumber").html(totalScore);
+            
+		});
+
+		$("#button-2").on("click", function() {
+
+			totalScore += k2;
+            $("#totalNumber").html(totalScore);
+            
+		});
+
+		$("#button-3").on("click", function() {
+
+			totalScore += k3;
+            $("#totalNumber").html(totalScore);
+            
+		});
+
+		$("#button-4").on("click", function() {
+
+			totalScore += k4;
+            $("#totalNumber").html(totalScore);
+            
+		});
 
 
+        //user wins or losses
+    	$("button").on("click", function() {
+            if (totalScore == randNumber) {
+
+                wins++;
+                console.log(totalScore);
+                $("#totalNumber").html(totalScore);
+                $("#wins").html("Wins: " + wins);
+
+
+                setTimeout(function() {gameReset("win!")}, 200);
+            }
+
+            else if (totalScore > randNumber){
+
+                losses++;
+                $("#totalNumber").html(totalScore);
+                $("#losses").html("Losses: " + losses);
+
+                setTimeout(function() {gameReset("lose!")}, 200);
+            }
+    });
+
+}); 
