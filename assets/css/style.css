@@ -1,1 +1,11 @@
 /* display 4 buttons here */
+
+
+#crystalCollectorHeader {
+
+    background-color: yellow;
+    width: 50%;
+    height: 50%;
+    align:top;
+    text-align: center;
+}
