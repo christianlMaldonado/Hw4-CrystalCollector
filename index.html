@@ -29,7 +29,7 @@
        
         <!-- conatiner for whole page-->
         <div class="container-fluid" id="mainHeader">
-             ....
+             .... <!-- delete the ... when complete -->
             
              <!-- Header -->
              <div class="jumbotron">
@@ -37,33 +37,65 @@
                 <h1> Army Builder </h1>
             
             </div>
+
+
+            <!-- text box -->
             <div class="textBox">
-                <h2> How to Play </h2>
+                <h2> Build your army! </h2>
 
                 <p> You will be given a random number at the start of the game.</p> 
 
                 <br> 
                 <br> 
                 
-                <p> There are four Knights below. By clicking on a Knight you will add a specifc amount of points to your total score to build your army to the determined number allowed.</p>
+                <p> There are four Knights below. By clicking on a Knight you will add a specifc amount of points to your total score to build your army.</p>
             
                 <br> 
                 <br> 
 
-                <p> The value of each Knight is hidden from you until you click on it </p> 
+                <p> The value of each Knight is hidden from you until you click on it. </p> 
 
                 <br> 
                 <br> 
 
-                <p> Each time when the game starts, the gem will change the values of each Knight </p>
+                <p> Each time when the game starts, the Knight will change the values. </p>
                 
                 <br> 
                 <br> 
           
             </div>
 
-            <!-- 4 clickable buttons -->
-            <div id ="buttonSection">
+            <!-- game box-->
+            <div id="numberSection"> 
+
+                <h3 id="random"> Unit size to build:  </h3> 
+
+                <h1 class="numberBox" id="randomNumber"> 120 </h1>
+
+
+            </div>
+
+
+            <!-- wins / losses section-->
+            <div class="row" id="scoreSection">
+    
+                <div id="winSection">
+                
+                    <h3 id="wins"> Wins:	0 </h3>
+                
+                </div>
+
+                <div id="lossSection">
+                  
+                    <h3 id="losses"> Losses: 0 </h3>
+                
+                </div>
+    
+            </div>
+
+
+            <!-- 4 clickable buttons boxes -->
+            <div id="buttonSection">
                 
                 <button id="button-1" value=0;><img src="assets/images/blueKnight.png" class="img-responsive icons" id="icon1"> </button> 
                 
@@ -74,9 +106,20 @@
                 <button id="button-4" value=0;><img src="assets/images/orangeKnight.png" class="img-responsive icons" id="icon4"> </button>  
             
             </div> 
-        
-        </div>
+            
+            <!-- total points box -->
+            <div id="totalPointsSection">
+
+                <h3 id="score"> Total Score :  </h3>
+                
+
+            </div>
+
+            <h1 class="totalBox" id="totalNumber"> 0 </h1>      
    
     </body>
+
+    <!-- js logic-->
+    <script src="assets/javascript/game.js"></script>
 
 </html>
