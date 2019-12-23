@@ -1,11 +1,23 @@
 /* display 4 buttons here */
 
 
-#crystalCollectorHeader {
+ /* This is the jumbotron header  */
+ .jumbotron {
 
-    background-color: yellow;
+    background-color: teal;
     width: 50%;
     height: 50%;
     align:top;
     text-align: center;
+    font-weight: bold;
+}
+
+/* This is the box in which the text is displayed */
+.textBox {
+
+background-color: yellow;
+text-align: center;
+width: 50%;
+height: 50%;
+
 }

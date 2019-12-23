@@ -3,6 +3,18 @@
 
     <head>
 
+        <!-- Reset css-->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+       
+        <!-- bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap"> 
+        
+        <!-- style css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!-- jquery -->
+        <script src="https:code.jquery.comjquery.js"> </script> 
+
         <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +23,60 @@
 
         <title>Homework4CrystalCollector</title>
 
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
     </head>
 
     <body>
+       
+        <!-- conatiner for whole page-->
+        <div class="container-fluid" id="mainHeader">
+             ....
+            
+             <!-- Header -->
+             <div class="jumbotron">
 
-        <!-- 4 clickable buttons -->
-        <div id ="buttonSection">
+                <h1> Army Builder </h1>
             
-            <button id="button-1" value=0;><img src="assets/images/blueKnight.png" class="img-responsive icons" id="icon1"> </button> 
+            </div>
+            <div class="textBox">
+                <h2> How to Play </h2>
+
+                <p> You will be given a random number at the start of the game.</p> 
+
+                <br> 
+                <br> 
+                
+                <p> There are four Knights below. By clicking on a Knight you will add a specifc amount of points to your total score to build your army to the determined number allowed.</p>
             
-            <button id="button-1" value=0;><img src="assets/images/redKnight.png" class="img-responsive icons" id="icon1"> </button> 
+                <br> 
+                <br> 
+
+                <p> The value of each Knight is hidden from you until you click on it </p> 
+
+                <br> 
+                <br> 
+
+                <p> Each time when the game starts, the gem will change the values of each Knight </p>
+                
+                <br> 
+                <br> 
+          
+            </div>
+
+            <!-- 4 clickable buttons -->
+            <div id ="buttonSection">
+                
+                <button id="button-1" value=0;><img src="assets/images/blueKnight.png" class="img-responsive icons" id="icon1"> </button> 
+                
+                <button id="button-2" value=0;><img src="assets/images/redKnight.png" class="img-responsive icons" id="icon2"> </button> 
+                
+                <button id="button-3" value=0;><img src="assets/images/greenKnight.png" class="img-responsive icons" id="icon3"> </button> 
+                
+                <button id="button-4" value=0;><img src="assets/images/orangeKnight.png" class="img-responsive icons" id="icon4"> </button>  
             
-            <button id="button-1" value=0;><img src="assets/images/greenKnight.png" class="img-responsive icons" id="icon1"> </button> 
-            
-            <button id="button-1" value=0;><img src="assets/images/orangeKnight.png" class="img-responsive icons" id="icon1"> </button>  
+            </div> 
         
-        </div> 
-    
+        </div>
+   
     </body>
 
 </html>
